@@ -37,8 +37,6 @@ objects:
     strategy:
       sourceStrategy:
         env:
-        - name: MAVEN_MIRROR_URL
-          value: ${MAVEN_MIRROR_URL}
         - name: MAVEN_ARGS
           value: ${MAVEN_ARGS}
         - name: db-cppagos-url
@@ -166,15 +164,11 @@ parameters:
   displayName: Git source repository
   name: GIT_URI
   required: true
-  value: git@gitlab.coordinadorelectrico.cl:00-arquitectura/poc-redhat-arq.git
+  value: git@github.com:PhantomDuoc/api-personas-rrhh-personas.git
 - displayName: Git branch/tag reference
   name: GIT_REF
   required: true
   value: develop
-- description: Maven mirror url. If nexus is deployed locally, use nexus url (e.g. http://nexus.ci:8081/content/groups/public/)
-  displayName: Maven mirror url
-  name: MAVEN_MIRROR_URL
-  value: http://nexus3-arquitectura.apps.prod-os-1.coordinador.cl/repository/maven-group/
 - description: Aguments
   displayName: ARG
   name: MAVEN_ARGS
@@ -186,4 +180,4 @@ parameters:
 - description: Namespace environment
   displayName: namespace
   name: NAME_SPACE
-  value: coordinador-dev
+  value: rhfuse
