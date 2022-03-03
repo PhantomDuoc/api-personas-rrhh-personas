@@ -39,26 +39,6 @@ objects:
         env:
         - name: MAVEN_ARGS
           value: ${MAVEN_ARGS}
-        - name: db-cppagos-url
-          valueFrom:
-            secretKeyRef:
-              name: db-cppagos-url
-              key: WebHookSecretKey
-        - name: db-cppagos-user
-          valueFrom:
-            secretKeyRef:
-              name: db-cppagos-user
-              key: WebHookSecretKey
-        - name: db-cppagos-password
-          valueFrom:
-            secretKeyRef:
-              name: db-cppagos-password
-              key: WebHookSecretKey
-        - name: port-service-exposed
-          valueFrom:
-            secretKeyRef:
-              name: port-service-exposed
-              key: WebHookSecretKey
         from:
           kind: ImageStreamTag
           name: java:openjdk-8-ubi8
